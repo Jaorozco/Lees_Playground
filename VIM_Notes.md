@@ -24,13 +24,16 @@ Three modes in VIM:
 - **'nb'** = moves back 'n' word  
 - **'{'** = move backward one paragraph  
 - **'}'** = move forward one paragraph  
-**`ESC`** key to make sure you are in normal mode  
-**:q!** = quit VIM  
-**'x'** = delete a character under the cursor  
-**'i'** = insert some text. _'Move the cursor on top of the first character AFTER where the text is to be inserted._  
-**'a'** = append some text. _'Move the cursor to the first line that you need to append. It does not matter what character the cursor is in that line_  
-**:wq** = saves the file and then exits  
+#### Reading, Inserting, Appending, Saving & Exiting:
+- **`ESC`** key to make sure you are in normal mode  
+- **:q!** = quit VIM  
+- **'x'** = delete a character under the cursor  
+- **'i'** = insert some text. _'Move the cursor on top of the first character AFTER where the text is to be inserted._  
+- **'a'** = append some text. _'Move the cursor to the first line that you need to append. It does not matter what character the cursor is in that line_  
+- **:wq** = saves the file and then exits  
+**'CAT'** = lets you views the contents of the file without being in the VIM interface  
+#### Deleting:
 **dw** = delete + motion (w). _'w = Until the the start if the next word, EXCLUDING its first character'_ 
 **de** = delete + motion (e). _'e = To the end of the current word, INCLUDING the last character'_ 
 **d$** = delete + motion ($). _'$ = To the end of the line, INCLUDING the last character'_  
-**'CAT'** = lets you views the contents of the file without being in the VIM interface  
+  
