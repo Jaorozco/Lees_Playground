@@ -78,3 +78,7 @@ _**'nl'**_ = Show the number of lines. (Note it does not account for line spaces
 - _**'sed'**_ = stands for stream editor, it effectively allows us to do a search and replace on our data  
      - "_sed 's/oranges/bananas/g' test1.txt_" = In our test1.txt file the 'sed' command will search for oranges and replace it with bananas. The initial **'s'** stands for substitute and specifies the action to perform (there are others but for now we'll keep it simple). Then between the first and second slashes ( / ) we place what it is we are searching for. Then between the second and third slashes, what it is we wish to replace it with. The **'g'** at the end stands for global and is optional. If we omit it then it will only replace the first instance of search on each line. With the g option we will replace every instance of search that is on each line  
 - _**'uniq'**_ = stands for unique and it removes duplicate lines from the data. (_LIMITATION: Lines have to be in the adjacent i.e. one after the other_)  
+- _**'tac'**_ = it is 'cat' in reverse :smiley:  
+- _**'awk'**_ = **[PLEASE READ BEFORE BOOTCAMP STARTS!!!!!!!]**  
+-_**'diff'**_ = **[PLEASE READ BEFORE BOOTCAMP STARTS!!!!!!!]**  
+
