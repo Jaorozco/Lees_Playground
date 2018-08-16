@@ -21,4 +21,5 @@ Three modes in VIM:
 **:wq** = saves the file and then exits  
 **dw** = delete + motion (w). _'w = Until the the start if the next word, EXCLUDING its first character'_ 
 **de** = delete + motion (e). _'e = To the end of the current word, INCLUDING the last character'_ 
-**d$** = delete + motion ($). _'$ = To the end of the line, INCLUDING the last character' _
+**d$** = delete + motion ($). _'$ = To the end of the line, INCLUDING the last character'_  
+**'CAT'** = lets you views the contents of the file without being in the VIM interface  
