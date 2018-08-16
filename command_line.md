@@ -80,5 +80,7 @@ _**'nl'**_ = Show the number of lines. (Note it does not account for line spaces
 - _**'uniq'**_ = stands for unique and it removes duplicate lines from the data. (_LIMITATION: Lines have to be in the adjacent i.e. one after the other_)  
 - _**'tac'**_ = it is 'cat' in reverse :smiley:  
 - _**'awk'**_ = **[PLEASE READ BEFORE BOOTCAMP STARTS!!!!!!!]**  
--_**'diff'**_ = **[PLEASE READ BEFORE BOOTCAMP STARTS!!!!!!!]**  
+- _**'diff'**_ = **[PLEASE READ BEFORE BOOTCAMP STARTS!!!!!!!]**  
 
+#### Grep and regular expressions:
+- _**''**_ = 
