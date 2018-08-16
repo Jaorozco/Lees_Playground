@@ -6,15 +6,15 @@ Three modes in VIM:
 
 ## Commands in VIM 
 #### Changes with parens, quotes or curley brackets:
-- **CI)** = Change in parens    
-- **CI"** = Change inside quotes  
-- **CI}** = Change inside curly brackets  
-- **DI)** = Delete inside brackets  
+- **'CI)'** = Change in parens    
+- **'CI"'** = Change inside quotes  
+- **'CI}'** = Change inside curly brackets  
+- **'DI)'** = Delete inside brackets  
 #### Navigation:
-- **k** = acts like the _**upper**_ arrrow  
-- **j** = acts like the _**down**_ arrow  
-- **l** = acts like the _**right**_ arrow  
-- **h** = acts like the _**left**_ arrow  
+- **'k'** = acts like the _**upper**_ arrrow  
+- **'j'** = acts like the _**down**_ arrow  
+- **'l'** = acts like the _**right**_ arrow  
+- **'h'** = acts like the _**left**_ arrow  
 - **'^(caret)'** = moves the cursor to the beginning of the line  
 - **'nG'** = moves to the nth line (e.g. 5G would move to the 5th line)  
 - **'G'** = moves to the last line  
@@ -26,10 +26,10 @@ Three modes in VIM:
 - **'}'** = move forward one paragraph  
 #### Reading, Inserting, Appending, Saving & Exiting:
 - **`ESC`** key to make sure you are in normal mode  
-- **:q!** = quit VIM  
+- **':q!'** = quit VIM  
 - **'i'** = insert some text. _'Move the cursor on top of the first character AFTER where the text is to be inserted._  
 - **'a'** = append some text. _'Move the cursor to the first line that you need to append. It does not matter what character the cursor is in that line_  
-- **:wq** = saves the file and then exits  
+- **':wq'** = saves the file and then exits  
 **'CAT'** = lets you views the contents of the file without being in the VIM interface  
 **'less'** = less allows you to move up and down within a file using the arrow keys. You may go forward a whole page using the SpaceBar or back a page by pressing b. When you are done you can press q for quit  
 #### Deleting:
@@ -43,4 +43,4 @@ Three modes in VIM:
 #### Undoing:
 - **'u'** = Undo the last action  
 - **'U (UPPERCASE)'** = Undo all changes to the current line  
-###### NOTE: WILL BE ADDING MORE TO THIS LIST AS I WORK MORE IN VIM
+##### NOTE: WILL BE ADDING MORE TO THIS LIST AS I WORK MORE IN VIM
