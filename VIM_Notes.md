@@ -4,15 +4,26 @@ Three modes in VIM:
 - Insert  
 - Visual  
 
-## Commands in VIM  
-**CI)** = Change in parens    
-**CI"** = Change inside quotes  
-**CI}** = Change inside curly brackets  
-**DI)** = Delete inside brackets  
-**k** = acts like the _**upper**_ arrrow  
-**j** = acts like the _**down**_ arrow  
-**l** = acts like the _**right**_ arrow  
-**h** = acts like the _**left**_ arrow  
+## Commands in VIM 
+#### Changes with parens, quotes or curley brackets:
+- **CI)** = Change in parens    
+- **CI"** = Change inside quotes  
+- **CI}** = Change inside curly brackets  
+- **DI)** = Delete inside brackets  
+#### Navigation:
+- **k** = acts like the _**upper**_ arrrow  
+- **j** = acts like the _**down**_ arrow  
+- **l** = acts like the _**right**_ arrow  
+- **h** = acts like the _**left**_ arrow  
+- **'^(caret)'** = moves the cursor to the beginning of the line  
+- **'nG'** = moves to the nth line (e.g. 5G would move to the 5th line)  
+- **'G'** = moves to the last line  
+- **'w'** = moves to the beginnning of a word  
+- **'nw'** = moves to the beginning of the nth word (e.g. 5w would move to the beginning of the 5th word)  
+- **'b'** = moves to the beginning of the previous word  
+- **'nb'** = moves back 'n' word  
+- **'{'** = move backward one paragraph  
+- **'}'** = move forward one paragraph  
 **`ESC`** key to make sure you are in normal mode  
 **:q!** = quit VIM  
 **'x'** = delete a character under the cursor  
