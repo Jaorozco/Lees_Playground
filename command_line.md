@@ -82,5 +82,29 @@ _**'nl'**_ = Show the number of lines. (Note it does not account for line spaces
 - _**'awk'**_ = **[PLEASE READ BEFORE BOOTCAMP STARTS!!!!!!!]**  
 - _**'diff'**_ = **[PLEASE READ BEFORE BOOTCAMP STARTS!!!!!!!]**  
 
-#### Grep and regular expressions:
-- _**''**_ = 
+#### Grep and regular expressions (in short know as 're'):
+- _**'egrep'**_ = is a program that will search each line for a give set of data which contains a given set of pattern (_e.g. egrep 'orange' mysampledata.txt results in **Susy oranges 5 Terry oranges 9 Susy oranges 12**_)
+- _**'egrep -n'**_ = in addition to providing the each line the data contains it also provide the line number (_e.g. egrep -n 'orange' mysampledata.txt results in **2:Susy oranges 5 5:Terry oranges 9 7:Susy oranges 12**_)
+- _**'egrep -c'**_ = just provides the number of line it matched (_e.g. egrep -c 'orange' mysampledata.txt results in **3**-)
+
+#### Regular Expression Overview:
+- _**'. (dot)'**_ = a single character.
+- _**'?'**_ = the preceding character matches 0 or 1 times only.
+- _**'*'**_ = the preceding character matches 0 or more times.
+- _**'+'**_ = the preceding character matches 1 or more times.
+- _**'{n}'**_ = the preceding character matches exactly n times.
+- _**'{n,m}'**_ = the preceding character matches at least n times and not more than m times.
+- _**'[agd]'**_ = the character is one of those included within the square brackets.
+- _**'[^agd]'**_ = the character is not one of those included within the square brackets.
+- _**'[c-f]'**_ = the dash within the square brackets operates as a range. In this case it means either the letters c, d, e or f.
+- _**'()'**_ = allows us to group several characters to behave as one.
+- _**'| (pipe symbol)'**_ = the logical OR operation.
+- _**'^'**_ = matches the beginning of the line.
+- _**'$'**_ = matches the end of the line.
+
+#### Regular Expression examples:
+- to identify any line with two or more vowels in a row = _**egrep '[aeiou]{2,}' mysampledata.txt**_
+- any line with a 2 on it which is not the end of the line. In this example the multiplier + applies to the . which is any character = _**egrep '2.+' mysampledata.txt**_
+- the number 2 as the last character on the line = _**egrep '2$' mysampledata.txt**_
+- each line which contains either 'is' or 'go' or 'or' = _**egrep 'or|is|go' mysampledata.txt**_
+- to see orders for everyone who's name begins with A - K = _**egrep '^[A-K]' mysampledata.txt**_
