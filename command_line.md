@@ -108,3 +108,25 @@ _**'nl'**_ = Show the number of lines. (Note it does not account for line spaces
 - the number 2 as the last character on the line = _**egrep '2$' mysampledata.txt**_
 - each line which contains either 'is' or 'go' or 'or' = _**egrep 'or|is|go' mysampledata.txt**_
 - to see orders for everyone who's name begins with A - K = _**egrep '^[A-K]' mysampledata.txt**_
+
+#### Piping and Redirection
+There are three data streams whenever we run a command on the command line. They are as follows:
+- _**STDIN (0)**_ = Standard Input data (data fed into the program)
+- _**STDOUT (1)**_ = Standard output (data printed by the program, defaults to Terminal)
+- _**STDERR (2)**_ = Standard error (for error messages, also defaults to Terminal)
+
+##### Example of Redirecting a file (I created an 'Examples folder on my work laptop')
+- _**ls > myoutput**_ (_The greater than operator ( > ) indicates to the command line that we wish the programs output (or whatever it sends to STDOUT) to be saved in a file instead of printed to the screen_)
+- _**cat myoutput**_ = Shows what got saved in the myoutput file (_i.e. a listing of all the files in the 'examples' folder_)
+- _**(>>)**_ = When using the double greater you append an exisiting command to the myoutput file. (_e.g. 'wc -l test2.txt >> myoutput')_
+- _**(<) less than operator**_ = we can send data the other way
+
+#### Redirectig STDERR file
+- _**STDERR**_ = is stream number 2 and we can use these numbers to identify these streams 
+- Example of using to redirect error = **'ls -l test1.txt abc.txt 2> error.txt'** --->>> **'cat error.txt'** (_NOTE: In order to redirect error you simply place the **'2'** before the **'(>)'** operator_)
+- Example of using command to save both normal output and error message in a single file. = **'ls -l test1.txt abc.txt > myoutput3 2>&1'** (_NOTE: This can be done by redirecting the STDERR stream to the STDOUT stream and redirecting STDOUT to a file. We redirect to a file first then redirect the error stream. We identify the redirection to a stream by placing an & in front of the stream number (otherwise it would redirect to a file called 1)_)
+
+#### Piping:
+Mechanism of sending data from one program to another. 
+
+
