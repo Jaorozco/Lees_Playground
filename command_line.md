@@ -139,4 +139,6 @@ Example = **ls | head -3 | tail -1 > myoutput4**.
                    1. **'$0' - The name of the script**.  
                    2. **'$1 - $9' - Any command line arguments given to the script. $1 is the first argument, $2 the second and so                        on**.  
                    3. **'$#' - How many command line arguments were given to the script**.  
-                   4. **'$* - All of the command line arguments'**  
+                   4. **'$ - All of the command line arguments'**  
+- **Backticks** = Look at example 'backticks.sh'
+- 
