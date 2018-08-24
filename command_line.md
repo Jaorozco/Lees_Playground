@@ -88,54 +88,55 @@ _**'nl'**_ = Show the number of lines. (Note it does not account for line spaces
 - _**'egrep -c'**_ = just provides the number of line it matched (_e.g. egrep -c 'orange' mysampledata.txt results in **3**-)
 
 #### Regular Expression Overview:
-- _**'. (dot)'**_ = a single character.
-- _**'?'**_ = the preceding character matches 0 or 1 times only.
-- _**'*'**_ = the preceding character matches 0 or more times.
-- _**'+'**_ = the preceding character matches 1 or more times.
-- _**'{n}'**_ = the preceding character matches exactly n times.
-- _**'{n,m}'**_ = the preceding character matches at least n times and not more than m times.
-- _**'[agd]'**_ = the character is one of those included within the square brackets.
-- _**'[^agd]'**_ = the character is not one of those included within the square brackets.
-- _**'[c-f]'**_ = the dash within the square brackets operates as a range. In this case it means either the letters c, d, e or f.
-- _**'()'**_ = allows us to group several characters to behave as one.
-- _**'| (pipe symbol)'**_ = the logical OR operation.
-- _**'^'**_ = matches the beginning of the line.
-- _**'$'**_ = matches the end of the line.
+- _**'. (dot)'**_ = a single character.  
+- _**'?'**_ = the preceding character matches 0 or 1 times only.  
+- _**'*'**_ = the preceding character matches 0 or more times.  
+- _**'+'**_ = the preceding character matches 1 or more times.  
+- _**'{n}'**_ = the preceding character matches exactly n times.  
+- _**'{n,m}'**_ = the preceding character matches at least n times and not more than m times.  
+- _**'[agd]'**_ = the character is one of those included within the square brackets.  
+- _**'[^agd]'**_ = the character is not one of those included within the square brackets.  
+- _**'[c-f]'**_ = the dash within the square brackets operates as a range. In this case it means either the letters c, d, e or f.  
+- _**'()'**_ = allows us to group several characters to behave as one.  
+- _**'| (pipe symbol)'**_ = the logical OR operation.  
+- _**'^'**_ = matches the beginning of the line.  
+- _**'$'**_ = matches the end of the line.  
 
-#### Regular Expression examples:
-- to identify any line with two or more vowels in a row = _**egrep '[aeiou]{2,}' mysampledata.txt**_
-- any line with a 2 on it which is not the end of the line. In this example the multiplier + applies to the . which is any character = _**egrep '2.+' mysampledata.txt**_
-- the number 2 as the last character on the line = _**egrep '2$' mysampledata.txt**_
-- each line which contains either 'is' or 'go' or 'or' = _**egrep 'or|is|go' mysampledata.txt**_
-- to see orders for everyone who's name begins with A - K = _**egrep '^[A-K]' mysampledata.txt**_
+#### Regular Expression examples:  
+- to identify any line with two or more vowels in a row = _**egrep '[aeiou]{2,}' mysampledata.txt**_. 
+- any line with a 2 on it which is not the end of the line. In this example the multiplier + applies to the . which is any character = _**egrep '2.+' mysampledata.txt**_. 
+- the number 2 as the last character on the line = _**egrep '2$' mysampledata.txt**_. 
+- each line which contains either 'is' or 'go' or 'or' = _**egrep 'or|is|go' mysampledata.txt**_. 
+- to see orders for everyone who's name begins with A - K = _**egrep '^[A-K]' mysampledata.txt**_. 
 
-#### Piping and Redirection
-There are three data streams whenever we run a command on the command line. They are as follows:
-- _**STDIN (0)**_ = Standard Input data (data fed into the program)
-- _**STDOUT (1)**_ = Standard output (data printed by the program, defaults to Terminal)
-- _**STDERR (2)**_ = Standard error (for error messages, also defaults to Terminal)
+#### Piping and Redirection. 
+There are three data streams whenever we run a command on the command line. They are as follows:  
+- _**STDIN (0)**_ = Standard Input data (data fed into the program). 
+- _**STDOUT (1)**_ = Standard output (data printed by the program, defaults to Terminal). 
+- _**STDERR (2)**_ = Standard error (for error messages, also defaults to Terminal). 
 
-##### Example of Redirecting a file (I created an 'Examples folder on my work laptop')
-- _**ls > myoutput**_ (_The greater than operator ( > ) indicates to the command line that we wish the programs output (or whatever it sends to STDOUT) to be saved in a file instead of printed to the screen_)
-- _**cat myoutput**_ = Shows what got saved in the myoutput file (_i.e. a listing of all the files in the 'examples' folder_)
-- _**(>>)**_ = When using the double greater you append an exisiting command to the myoutput file. (_e.g. 'wc -l test2.txt >> myoutput')_
-- _**(<) less than operator**_ = we can send data the other way
+##### Example of Redirecting a file (I created an 'Examples folder on my work laptop'). 
+- _**ls > myoutput**_ (_The greater than operator ( > ) indicates to the command line that we wish the programs output (or whatever it sends to STDOUT) to be saved in a file instead of printed to the screen_). 
+- _**cat myoutput**_ = Shows what got saved in the myoutput file (_i.e. a listing of all the files in the 'examples' folder_). 
+- _**(>>)**_ = When using the double greater you append an exisiting command to the myoutput file. (_e.g. 'wc -l test2.txt >> myoutput')_. 
+- _**(<) less than operator**_ = we can send data the other way. 
 
-#### Redirectig STDERR file
-- _**STDERR**_ = is stream number 2 and we can use these numbers to identify these streams 
-- Example of using to redirect error = **'ls -l test1.txt abc.txt 2> error.txt'** --->>> **'cat error.txt'** (_NOTE: In order to redirect error you simply place the **'2'** before the **'(>)'** operator_)
-- Example of using command to save both normal output and error message in a single file. = **'ls -l test1.txt abc.txt > myoutput3 2>&1'** (_NOTE: This can be done by redirecting the STDERR stream to the STDOUT stream and redirecting STDOUT to a file. We redirect to a file first then redirect the error stream. We identify the redirection to a stream by placing an & in front of the stream number (otherwise it would redirect to a file called 1)_)
+#### Redirectig STDERR file. 
+- _**STDERR**_ = is stream number 2 and we can use these numbers to identify these streams. 
+- Example of using to redirect error = **'ls -l test1.txt abc.txt 2> error.txt'** --->>> **'cat error.txt'** (_NOTE: In order to redirect error you simply place the **'2'** before the **'(>)'** operator_). 
+- Example of using command to save both normal output and error message in a single file. = **'ls -l test1.txt abc.txt > myoutput3 2>&1'** (_NOTE: This can be done by redirecting the STDERR stream to the STDOUT stream and redirecting STDOUT to a file. We redirect to a file first then redirect the error stream. We identify the redirection to a stream by placing an & in front of the stream number (otherwise it would redirect to a file called 1)_).  
 
-#### Piping [Ryan's Tutorial on Piping](https://ryanstutorials.net/linuxtutorial/piping.php):
-Mechanism of sending data from one program to another. (_This is pretty much like slicing in Python_). Also click on the link above to look at some examples.
-Example = **ls | head -3 | tail -1 > myoutput4**
+#### Piping [Ryan's Tutorial on Piping](https://ryanstutorials.net/linuxtutorial/piping.php):  
+Mechanism of sending data from one program to another. (_This is pretty much like slicing in Python_). Also click on the link above to look at some examples.   
+Example = **ls | head -3 | tail -1 > myoutput4**.   
 
-#### Process Management (Read this later)
+#### Process Management (Read this later). 
 
-#### Bash Scripting
+#### Bash Scripting. 
 - **'#! (Shebang)'** = Tells the system that directly after it will be a path to the interpreter to be used
 - **'which bash'** = TO find out what type of interperator to use (_e.g.'which bash'_)
-- **Variables** =  1. **'$0' - The name of the script**
-                   2. **'$1 - $9' - Any command line arguments given to the script. $1 is the first argument, $2 the second and so                        on**
-                   3. **'$#' - How many command line arguments were given to the script**
-                   4. **'$* - All of the command line arguments'**
+- **Variables** =  
+                   1. **'$0' - The name of the script**.  
+                   2. **'$1 - $9' - Any command line arguments given to the script. $1 is the first argument, $2 the second and so                        on**.  
+                   3. **'$#' - How many command line arguments were given to the script**.  
+                   4. **'$* - All of the command line arguments'**  
