@@ -126,7 +126,16 @@ There are three data streams whenever we run a command on the command line. They
 - Example of using to redirect error = **'ls -l test1.txt abc.txt 2> error.txt'** --->>> **'cat error.txt'** (_NOTE: In order to redirect error you simply place the **'2'** before the **'(>)'** operator_)
 - Example of using command to save both normal output and error message in a single file. = **'ls -l test1.txt abc.txt > myoutput3 2>&1'** (_NOTE: This can be done by redirecting the STDERR stream to the STDOUT stream and redirecting STDOUT to a file. We redirect to a file first then redirect the error stream. We identify the redirection to a stream by placing an & in front of the stream number (otherwise it would redirect to a file called 1)_)
 
-#### Piping:
-Mechanism of sending data from one program to another. 
+#### Piping [Ryan's Tutorial on Piping](https://ryanstutorials.net/linuxtutorial/piping.php):
+Mechanism of sending data from one program to another. (_This is pretty much like slicing in Python_). Also click on the link above to look at some examples.
+Example = **ls | head -3 | tail -1 > myoutput4**
 
+#### Process Management (Read this later)
 
+#### Bash Scripting
+- **'#! (Shebang)'** = Tells the system that directly after it will be a path to the interpreter to be used
+- **'which bash'** = TO find out what type of interperator to use (_e.g.'which bash'_)
+- **Variables** =  1. **'$0' - The name of the script**
+                   2. **'$1 - $9' - Any command line arguments given to the script. $1 is the first argument, $2 the second and so                        on**
+                   3. **'$#' - How many command line arguments were given to the script**
+                   4. **'$* - All of the command line arguments'**
