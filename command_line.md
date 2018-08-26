@@ -133,12 +133,37 @@ Example = **ls | head -3 | tail -1 > myoutput4**.
 #### Process Management (Read this later). 
 
 #### Bash Scripting. 
-- **'#! (Shebang)'** = Tells the system that directly after it will be a path to the interpreter to be used
+- **'#! (Shebang)'** =  Following the '_Shebang (#!)_' is the path to the interpreter (or program) that should be used to run (or interpret) the rest of the lines in the text file.
 - **'which bash'** = TO find out what type of interperator to use (_e.g.'which bash'_)
-- **Variables** =  
-                   1. **'$0' - The name of the script**.  
-                   2. **'$1 - $9' - Any command line arguments given to the script. $1 is the first argument, $2 the second and so                        on**.  
-                   3. **'$#' - How many command line arguments were given to the script**.  
-                   4. **'$ - All of the command line arguments'**  
+
+##### Variables  
+1. **'$0' - The name of the Bash script**.  
+2. **'$1 - $9' - Any command line arguments given to the Bash Script. $1 is the first argument, $2 the second and so                        on**.  
+3. **'$#' - How many command line arguments were given to the Bash Script**.  
+4. **'$@' - All arguments supplied to the Bash Script**. 
+5. **'$?' - The exit status of the most recently run process**. 
+6. **'$$' - The process ID of the current script**.  
+7. **'$USER' - The Username of the USer running the script**. 
+8. **'$HOSTNAME' - THe hostname of the machine the cript is running on**. 
+9. **'SECONDS' - The number of seconds since the script started**. 
+10. **'$RANDOM' - Returns a different random number each time is it referred to**. 
+11. **'$LINEO' - Returns the current line number in the Bash Script**. 
 - **Backticks** = Look at example 'backticks.sh'
-- 
+- **("") Double Quotes** = Allows you to do substitution (that is include variables within the setting of the value). 
+- **('') Single Quotes** = Will treat every character literally. (Please see double_single_quote.txt)
+- **Exporting Variables** = Look at example (_exportingvariables1.sh and exportingvariables2.sh_. 
+
+##### Input [Ryan's Tutorial Inputs](https://ryanstutorials.net/bash-scripting-tutorial/bash-input.php)
+1. **'read'** = Use the **'read'** command to use Input in Bash Script (_See Example **'Introduction.sh'** & **'login.sh'**_). 
+
+##### Arithmetic [Ryan's Tutorial Arithmetic](https://ryanstutorials.net/bash-scripting-tutorial/bash-arithmetic.php). 
+
+##### IF Statements [Ryan's Tutorial Arithmetic](https://ryanstutorials.net/bash-scripting-tutorial/bash-if-statements.php). 
+
+##### Loops [Ryan's Tutorial Loops](https://ryanstutorials.net/bash-scripting-tutorial/bash-loops.php). 
+
+##### Functions [Ryan's Tutorial Function](https://ryanstutorials.net/bash-scripting-tutorial/bash-functions.php). 
+
+
+
+
